@@ -7,6 +7,7 @@ public class DateUtils {
 		
 		System.out.println("The current date is:");
 		System.out.println(getLocalCurrentDate());
+		System.out.println("That was the current date:");
 
 
 	}
