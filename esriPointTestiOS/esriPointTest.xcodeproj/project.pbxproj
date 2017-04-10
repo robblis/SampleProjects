@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		121FDC471E5DF91800B0FB2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121FDC461E5DF91800B0FB2C /* AppDelegate.swift */; };
+		121FDC491E5DF91800B0FB2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121FDC481E5DF91800B0FB2C /* ViewController.swift */; };
+		121FDC4C1E5DF91800B0FB2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121FDC4A1E5DF91800B0FB2C /* Main.storyboard */; };
+		121FDC4F1E5DF91800B0FB2C /* esriPointTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 121FDC4D1E5DF91800B0FB2C /* esriPointTest.xcdatamodeld */; };
+		121FDC511E5DF91800B0FB2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 121FDC501E5DF91800B0FB2C /* Assets.xcassets */; };
+		121FDC541E5DF91800B0FB2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121FDC521E5DF91800B0FB2C /* LaunchScreen.storyboard */; };
+		121FDC5F1E5DF91900B0FB2C /* esriPointTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121FDC5E1E5DF91900B0FB2C /* esriPointTestTests.swift */; };
+		121FDC6A1E5DF91900B0FB2C /* esriPointTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121FDC691E5DF91900B0FB2C /* esriPointTestUITests.swift */; };
+		121FDC781E5E162100B0FB2C /* Storyboard1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121FDC771E5E162100B0FB2C /* Storyboard1.storyboard */; };
+		121FDC791E5E162100B0FB2C /* Storyboard1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121FDC771E5E162100B0FB2C /* Storyboard1.storyboard */; };
+		121FDC7A1E5E162100B0FB2C /* Storyboard1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121FDC771E5E162100B0FB2C /* Storyboard1.storyboard */; };
+		121FDC7C1E5E18E000B0FB2C /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121FDC7B1E5E18E000B0FB2C /* ArcGIS.framework */; };
+		3C6FBDF875F836C87561B1C4 /* Pods_esriPointTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CA0CD1969D5F89F622A010 /* Pods_esriPointTestTests.framework */; };
+		45D05A9A4002743C4240E0F4 /* Pods_esriPointTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F524546CFD3EF6164177AFFD /* Pods_esriPointTestUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		121FDC5B1E5DF91900B0FB2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 121FDC3B1E5DF91800B0FB2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 121FDC421E5DF91800B0FB2C;
+			remoteInfo = esriPointTest;
+		};
+		121FDC661E5DF91900B0FB2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 121FDC3B1E5DF91800B0FB2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 121FDC421E5DF91800B0FB2C;
+			remoteInfo = esriPointTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06BD8BA1ADB7D912B37C04F6 /* Pods-esriPointTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-esriPointTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-esriPointTestUITests/Pods-esriPointTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		121FDC431E5DF91800B0FB2C /* esriPointTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = esriPointTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		121FDC461E5DF91800B0FB2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		121FDC481E5DF91800B0FB2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		121FDC4B1E5DF91800B0FB2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		121FDC4E1E5DF91800B0FB2C /* esriPointTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = esriPointTest.xcdatamodel; sourceTree = "<group>"; };
+		121FDC501E5DF91800B0FB2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		121FDC531E5DF91800B0FB2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		121FDC551E5DF91800B0FB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		121FDC5A1E5DF91900B0FB2C /* esriPointTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = esriPointTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		121FDC5E1E5DF91900B0FB2C /* esriPointTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = esriPointTestTests.swift; sourceTree = "<group>"; };
+		121FDC601E5DF91900B0FB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		121FDC651E5DF91900B0FB2C /* esriPointTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = esriPointTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		121FDC691E5DF91900B0FB2C /* esriPointTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = esriPointTestUITests.swift; sourceTree = "<group>"; };
+		121FDC6B1E5DF91900B0FB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		121FDC771E5E162100B0FB2C /* Storyboard1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard1.storyboard; path = ../Storyboard1.storyboard; sourceTree = "<group>"; };
+		121FDC7B1E5E18E000B0FB2C /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = "Pods/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework"; sourceTree = "<group>"; };
+		2A72125F068AEA3A4B337EE9 /* Pods-esriPointTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-esriPointTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-esriPointTestUITests/Pods-esriPointTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		47B89DCF0D08693C5028657E /* Pods-esriPointTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-esriPointTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-esriPointTestTests/Pods-esriPointTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D377F43676238B71356F03D /* Pods-esriPointTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-esriPointTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-esriPointTest/Pods-esriPointTest.debug.xcconfig"; sourceTree = "<group>"; };
+		5E080AAACEBBD7B95AA7B4B8 /* Pods_esriPointTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_esriPointTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		949902A59A88550A3BCAE286 /* Pods-esriPointTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-esriPointTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-esriPointTestTests/Pods-esriPointTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		D0CA0CD1969D5F89F622A010 /* Pods_esriPointTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_esriPointTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8DCDC83A5FDA2E8BD80E9B3 /* Pods-esriPointTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-esriPointTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-esriPointTest/Pods-esriPointTest.release.xcconfig"; sourceTree = "<group>"; };
+		F524546CFD3EF6164177AFFD /* Pods_esriPointTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_esriPointTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		121FDC401E5DF91800B0FB2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				121FDC7C1E5E18E000B0FB2C /* ArcGIS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		121FDC571E5DF91900B0FB2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C6FBDF875F836C87561B1C4 /* Pods_esriPointTestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		121FDC621E5DF91900B0FB2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D05A9A4002743C4240E0F4 /* Pods_esriPointTestUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		121FDC3A1E5DF91800B0FB2C = {
+			isa = PBXGroup;
+			children = (
+				121FDC451E5DF91800B0FB2C /* esriPointTest */,
+				121FDC5D1E5DF91900B0FB2C /* esriPointTestTests */,
+				121FDC681E5DF91900B0FB2C /* esriPointTestUITests */,
+				121FDC441E5DF91800B0FB2C /* Products */,
+				6D805D16ACA7909DD0D0F21F /* Pods */,
+				32C8479D61C26F79ED0698F8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		121FDC441E5DF91800B0FB2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				121FDC431E5DF91800B0FB2C /* esriPointTest.app */,
+				121FDC5A1E5DF91900B0FB2C /* esriPointTestTests.xctest */,
+				121FDC651E5DF91900B0FB2C /* esriPointTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		121FDC451E5DF91800B0FB2C /* esriPointTest */ = {
+			isa = PBXGroup;
+			children = (
+				121FDC771E5E162100B0FB2C /* Storyboard1.storyboard */,
+				121FDC461E5DF91800B0FB2C /* AppDelegate.swift */,
+				121FDC481E5DF91800B0FB2C /* ViewController.swift */,
+				121FDC4A1E5DF91800B0FB2C /* Main.storyboard */,
+				121FDC501E5DF91800B0FB2C /* Assets.xcassets */,
+				121FDC521E5DF91800B0FB2C /* LaunchScreen.storyboard */,
+				121FDC551E5DF91800B0FB2C /* Info.plist */,
+				121FDC4D1E5DF91800B0FB2C /* esriPointTest.xcdatamodeld */,
+			);
+			path = esriPointTest;
+			sourceTree = "<group>";
+		};
+		121FDC5D1E5DF91900B0FB2C /* esriPointTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				121FDC5E1E5DF91900B0FB2C /* esriPointTestTests.swift */,
+				121FDC601E5DF91900B0FB2C /* Info.plist */,
+			);
+			path = esriPointTestTests;
+			sourceTree = "<group>";
+		};
+		121FDC681E5DF91900B0FB2C /* esriPointTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				121FDC691E5DF91900B0FB2C /* esriPointTestUITests.swift */,
+				121FDC6B1E5DF91900B0FB2C /* Info.plist */,
+			);
+			path = esriPointTestUITests;
+			sourceTree = "<group>";
+		};
+		32C8479D61C26F79ED0698F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				121FDC7B1E5E18E000B0FB2C /* ArcGIS.framework */,
+				5E080AAACEBBD7B95AA7B4B8 /* Pods_esriPointTest.framework */,
+				D0CA0CD1969D5F89F622A010 /* Pods_esriPointTestTests.framework */,
+				F524546CFD3EF6164177AFFD /* Pods_esriPointTestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D805D16ACA7909DD0D0F21F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D377F43676238B71356F03D /* Pods-esriPointTest.debug.xcconfig */,
+				D8DCDC83A5FDA2E8BD80E9B3 /* Pods-esriPointTest.release.xcconfig */,
+				47B89DCF0D08693C5028657E /* Pods-esriPointTestTests.debug.xcconfig */,
+				949902A59A88550A3BCAE286 /* Pods-esriPointTestTests.release.xcconfig */,
+				06BD8BA1ADB7D912B37C04F6 /* Pods-esriPointTestUITests.debug.xcconfig */,
+				2A72125F068AEA3A4B337EE9 /* Pods-esriPointTestUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		121FDC421E5DF91800B0FB2C /* esriPointTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 121FDC6E1E5DF91900B0FB2C /* Build configuration list for PBXNativeTarget "esriPointTest" */;
+			buildPhases = (
+				C623E52CD49C562D269CD2F4 /* [CP] Check Pods Manifest.lock */,
+				121FDC3F1E5DF91800B0FB2C /* Sources */,
+				121FDC401E5DF91800B0FB2C /* Frameworks */,
+				121FDC411E5DF91800B0FB2C /* Resources */,
+				9CFE6D7FA0CB5626ECDD413B /* [CP] Embed Pods Frameworks */,
+				525405A8A4AA389A64026068 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = esriPointTest;
+			productName = esriPointTest;
+			productReference = 121FDC431E5DF91800B0FB2C /* esriPointTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		121FDC591E5DF91900B0FB2C /* esriPointTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 121FDC711E5DF91900B0FB2C /* Build configuration list for PBXNativeTarget "esriPointTestTests" */;
+			buildPhases = (
+				24B959ADAFA42297BCE7BE33 /* [CP] Check Pods Manifest.lock */,
+				121FDC561E5DF91900B0FB2C /* Sources */,
+				121FDC571E5DF91900B0FB2C /* Frameworks */,
+				121FDC581E5DF91900B0FB2C /* Resources */,
+				AAB3D28BFE752F20D65772CA /* [CP] Embed Pods Frameworks */,
+				BF87405E2053622E6FDF11E9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				121FDC5C1E5DF91900B0FB2C /* PBXTargetDependency */,
+			);
+			name = esriPointTestTests;
+			productName = esriPointTestTests;
+			productReference = 121FDC5A1E5DF91900B0FB2C /* esriPointTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		121FDC641E5DF91900B0FB2C /* esriPointTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 121FDC741E5DF91900B0FB2C /* Build configuration list for PBXNativeTarget "esriPointTestUITests" */;
+			buildPhases = (
+				7F866B0A1700C430BB127774 /* [CP] Check Pods Manifest.lock */,
+				121FDC611E5DF91900B0FB2C /* Sources */,
+				121FDC621E5DF91900B0FB2C /* Frameworks */,
+				121FDC631E5DF91900B0FB2C /* Resources */,
+				A880F99F98C02EAF13818FB5 /* [CP] Embed Pods Frameworks */,
+				274129AFC6162E19DB0E14C1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				121FDC671E5DF91900B0FB2C /* PBXTargetDependency */,
+			);
+			name = esriPointTestUITests;
+			productName = esriPointTestUITests;
+			productReference = 121FDC651E5DF91900B0FB2C /* esriPointTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		121FDC3B1E5DF91800B0FB2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Teddy Matinde";
+				TargetAttributes = {
+					121FDC421E5DF91800B0FB2C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Z3P24W27MN;
+						ProvisioningStyle = Automatic;
+					};
+					121FDC591E5DF91900B0FB2C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Z3P24W27MN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 121FDC421E5DF91800B0FB2C;
+					};
+					121FDC641E5DF91900B0FB2C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Z3P24W27MN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 121FDC421E5DF91800B0FB2C;
+					};
+				};
+			};
+			buildConfigurationList = 121FDC3E1E5DF91800B0FB2C /* Build configuration list for PBXProject "esriPointTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 121FDC3A1E5DF91800B0FB2C;
+			productRefGroup = 121FDC441E5DF91800B0FB2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				121FDC421E5DF91800B0FB2C /* esriPointTest */,
+				121FDC591E5DF91900B0FB2C /* esriPointTestTests */,
+				121FDC641E5DF91900B0FB2C /* esriPointTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		121FDC411E5DF91800B0FB2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				121FDC541E5DF91800B0FB2C /* LaunchScreen.storyboard in Resources */,
+				121FDC511E5DF91800B0FB2C /* Assets.xcassets in Resources */,
+				121FDC4C1E5DF91800B0FB2C /* Main.storyboard in Resources */,
+				121FDC781E5E162100B0FB2C /* Storyboard1.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		121FDC581E5DF91900B0FB2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				121FDC791E5E162100B0FB2C /* Storyboard1.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		121FDC631E5DF91900B0FB2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				121FDC7A1E5E162100B0FB2C /* Storyboard1.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24B959ADAFA42297BCE7BE33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		274129AFC6162E19DB0E14C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-esriPointTestUITests/Pods-esriPointTestUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		525405A8A4AA389A64026068 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-esriPointTest/Pods-esriPointTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F866B0A1700C430BB127774 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9CFE6D7FA0CB5626ECDD413B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-esriPointTest/Pods-esriPointTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A880F99F98C02EAF13818FB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-esriPointTestUITests/Pods-esriPointTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAB3D28BFE752F20D65772CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-esriPointTestTests/Pods-esriPointTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF87405E2053622E6FDF11E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-esriPointTestTests/Pods-esriPointTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C623E52CD49C562D269CD2F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		121FDC3F1E5DF91800B0FB2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				121FDC491E5DF91800B0FB2C /* ViewController.swift in Sources */,
+				121FDC4F1E5DF91800B0FB2C /* esriPointTest.xcdatamodeld in Sources */,
+				121FDC471E5DF91800B0FB2C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		121FDC561E5DF91900B0FB2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				121FDC5F1E5DF91900B0FB2C /* esriPointTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		121FDC611E5DF91900B0FB2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				121FDC6A1E5DF91900B0FB2C /* esriPointTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		121FDC5C1E5DF91900B0FB2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 121FDC421E5DF91800B0FB2C /* esriPointTest */;
+			targetProxy = 121FDC5B1E5DF91900B0FB2C /* PBXContainerItemProxy */;
+		};
+		121FDC671E5DF91900B0FB2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 121FDC421E5DF91800B0FB2C /* esriPointTest */;
+			targetProxy = 121FDC661E5DF91900B0FB2C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		121FDC4A1E5DF91800B0FB2C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				121FDC4B1E5DF91800B0FB2C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		121FDC521E5DF91800B0FB2C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				121FDC531E5DF91800B0FB2C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		121FDC6C1E5DF91900B0FB2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		121FDC6D1E5DF91900B0FB2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		121FDC6F1E5DF91900B0FB2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D377F43676238B71356F03D /* Pods-esriPointTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z3P24W27MN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/ArcGIS-Runtime-SDK-iOS",
+				);
+				INFOPLIST_FILE = esriPointTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esri.ps.ap.esriPointTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		121FDC701E5DF91900B0FB2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8DCDC83A5FDA2E8BD80E9B3 /* Pods-esriPointTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z3P24W27MN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/ArcGIS-Runtime-SDK-iOS",
+				);
+				INFOPLIST_FILE = esriPointTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esri.ps.ap.esriPointTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		121FDC721E5DF91900B0FB2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B89DCF0D08693C5028657E /* Pods-esriPointTestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Z3P24W27MN;
+				INFOPLIST_FILE = esriPointTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esri.ps.ap.esriPointTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/esriPointTest.app/esriPointTest";
+			};
+			name = Debug;
+		};
+		121FDC731E5DF91900B0FB2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 949902A59A88550A3BCAE286 /* Pods-esriPointTestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Z3P24W27MN;
+				INFOPLIST_FILE = esriPointTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esri.ps.ap.esriPointTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/esriPointTest.app/esriPointTest";
+			};
+			name = Release;
+		};
+		121FDC751E5DF91900B0FB2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06BD8BA1ADB7D912B37C04F6 /* Pods-esriPointTestUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = Z3P24W27MN;
+				INFOPLIST_FILE = esriPointTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esri.ps.ap.esriPointTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = esriPointTest;
+			};
+			name = Debug;
+		};
+		121FDC761E5DF91900B0FB2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A72125F068AEA3A4B337EE9 /* Pods-esriPointTestUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = Z3P24W27MN;
+				INFOPLIST_FILE = esriPointTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esri.ps.ap.esriPointTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = esriPointTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		121FDC3E1E5DF91800B0FB2C /* Build configuration list for PBXProject "esriPointTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				121FDC6C1E5DF91900B0FB2C /* Debug */,
+				121FDC6D1E5DF91900B0FB2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		121FDC6E1E5DF91900B0FB2C /* Build configuration list for PBXNativeTarget "esriPointTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				121FDC6F1E5DF91900B0FB2C /* Debug */,
+				121FDC701E5DF91900B0FB2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		121FDC711E5DF91900B0FB2C /* Build configuration list for PBXNativeTarget "esriPointTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				121FDC721E5DF91900B0FB2C /* Debug */,
+				121FDC731E5DF91900B0FB2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		121FDC741E5DF91900B0FB2C /* Build configuration list for PBXNativeTarget "esriPointTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				121FDC751E5DF91900B0FB2C /* Debug */,
+				121FDC761E5DF91900B0FB2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		121FDC4D1E5DF91800B0FB2C /* esriPointTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				121FDC4E1E5DF91800B0FB2C /* esriPointTest.xcdatamodel */,
+			);
+			currentVersion = 121FDC4E1E5DF91800B0FB2C /* esriPointTest.xcdatamodel */;
+			path = esriPointTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 121FDC3B1E5DF91800B0FB2C /* Project object */;
+}
