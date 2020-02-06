@@ -19,3 +19,8 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(build.binariesdirectory)'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
