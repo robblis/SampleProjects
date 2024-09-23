@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import data from './data.json'
+import data from './config.json'
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         {
           data.map((data,i) => (
             <div key={i}>
-                <h1>{data.title}</h1>
+                <h2>{data.title}</h2>
                 <p>{data.url}</p>
             </div>
           ))

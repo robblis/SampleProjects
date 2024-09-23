@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "title": "Sevice_1",
+        "url": "https://massdot.cybertech.com/server/rest/services/Assets/PedCurbCuts/FeatureServer/0"
+    },
+    {
+        "id": "2",
+        "title": "Sevice_2",
+        "url": "https://massdot.cybertech.com/server/rest/services/Assets/Culverts/FeatureServer/0"
+    },
+    {
+        "id": "3",
+        "title": "Sevice_3",
+        "url": "https://massdot.cybertech.com/server/rest/services/Assets/Noise_Barriers/FeatureServer/0"
+    }
+]
