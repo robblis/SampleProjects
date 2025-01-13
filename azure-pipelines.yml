@@ -20,4 +20,5 @@ steps:
 - script: echo '##vso[task.setvariable variable=trgtFolder]master'
   displayName: "Set the trgtFolder as master if the Build.SourceBranch = 'refs/heads/master' "
   condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
-- bash: echo 'trgtFolder ' $(trgtFolder)
+
+- script: echo $(trgtFolder)
