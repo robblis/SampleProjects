@@ -12,10 +12,15 @@ pool:
   - Agent.Name -equals qacon
   #vmImage: 'ubuntu-latest'
 
+variables:
+- name: trgtFolder
+  value: ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/master')}}master; ${{ else }}develop
+
 steps:
+
+- bash: echo 'trgtFolder ' $(trgtFolder)
 - task: Ant@1
   inputs:
-    workingDirectory: ''
     buildFile: 'build.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
