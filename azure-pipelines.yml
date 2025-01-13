@@ -21,16 +21,3 @@ steps:
   displayName: "Set the trgtFolder as master if the Build.SourceBranch = 'refs/heads/master' "
   condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
 - bash: echo 'trgtFolder ' $(trgtFolder)
-- task: Ant@1
-  inputs:
-    buildFile: 'build.xml'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(build.binariesdirectory)'
-    Contents: '**'
-    TargetFolder: '$(build.artifactstagingdirectory)'
