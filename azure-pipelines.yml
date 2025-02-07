@@ -22,3 +22,5 @@ steps:
   condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
 
 - script: echo $(trgtFolder)
+- script: ls
+- script: pwd
