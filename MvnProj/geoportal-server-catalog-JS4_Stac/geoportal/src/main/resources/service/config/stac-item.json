@@ -1,0 +1,68 @@
+{	
+	"type":"Feature",	
+	"id": "$._source.id",
+	"collection": "$._source.src_collections_s[0]",		
+	"stac_version":"1.0.0",
+	"stac_extensions":[],
+	"bbox": ["$._source.envelope_geo","$._source.bbox"],	
+	"geometry": ["$._source.shape_geo",	"$._source.geometry"],	
+	"properties": {
+            "eo:sun_azimuth": "$._source.properties._SunAzimuth_l",
+            "eo:sun_elevation": "$._source.properties._SunZenith_l",
+            "eo:cloud_cover": "$._source.properties._CloudCover_l",
+            "eo:row": "$._source.properties._row_l",
+            "eo:column": "$._source.properties.column_l",
+            "eo:platform": "$._source.properties.src_harvested_dataset_s",
+            "eo:epsg": 4326,
+            "sentinel:utm_zone": "$._source.properties.sentinel_utm_zone",
+            "sentinel:latitude_band": "$._source.properties.sentinel_latitude_band",
+            "sentinel:grid_square": "$._source.properties.sentinel_grid_square",
+            "sentinel:sequence": "$._source.properties.sentinel_sequence",
+            "sentinel:product_id": "$._source.properties.sentinel_product_id",		
+            "updated":"$._source.sys_modified_dt",
+            "datetime":"$._source.sys_modified_dt"
+        },		
+	"assets":
+		{
+		"thumbnail": {
+		      "href": "$._source.thumbnail_s",
+		      "title": "Thumbnail",
+		      "description":"An asset that represents a thumbnail of the Item",
+		      "type": "image/jpeg",
+		      "roles": [
+		        "thumbnail"
+		      ]
+		    },
+		 "json-metadata": {
+		      "href": "$._source.links_s[0]",
+		      "title": "Extended Metadata",
+		      "description":"A metadata sidecar file describing the data in this Item, for example the Landsat-8 MTL file.",
+		      "type": "application/json",
+		      "roles": [
+		        "metadata"
+		      ]
+		   }		   		
+	  },
+	"links": [
+			{
+			"rel": "self",
+			"href": "{url}/collections/{itemCollectionId}/items/{itemId}",
+			"type": "application/geo+json"
+			},
+			{
+			"rel": "root",
+			"href": "{url}",
+			"type": "application/json"
+			},
+			{
+			"rel": "parent",
+			"href": "{url}/collections/{itemCollectionId}/items",
+			"type": "application/json"
+			},
+			{
+			"rel": "collection",
+			"href": "{url}/collections/{itemCollectionId}",
+			"type": "application/json"
+			}
+		]
+}

@@ -1,0 +1,157 @@
+geoportal/target/
+geoportal-search/target/
+geoportal-search/Projects/
+
+node_modules/
+ignore/
+z_*
+zz_*
+zzz_*
+
+*.bak
+*.class
+*.log
+
+.project
+.classpath
+.metadata
+.settings/
+.idea/
+
+*.jar
+*.war
+*.ear
+
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+.DS_Store
+Thumbs.db
+### JetBrains template
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+nb-configuration.xml
+
+# Sensitive or high-churn files:
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+# Gradle:
+.idea/gradle.xml
+.idea/libraries
+
+# Mongo Explorer plugin:
+.idea/mongoSettings.xml
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+/geoportal/geoportal.iml
+
+#VisualStudio ................................................................
+*.suo
+*.user
+*.sln.docstates
+[Dd]ebug/
+[Rr]elease/
+x64/
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.log
+*.vspscc
+*.vssscc
+.builds
+
+
+### JetBrains template
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+geoportal/nb-configuration.xml
+
+# Sensitive or high-churn files:
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+# Gradle:
+.idea/gradle.xml
+.idea/libraries
+
+# Mongo Explorer plugin:
+.idea/mongoSettings.xml
+
+## File-based project format:
+*.iws
+*.iml
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+.vscode/settings.json
+geoportal/.factorypath
+geoportal/.vscode/settings.json
+/components/CswClient/Pro/CswClient/obj
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+/components/CswClient/Pro/CswClient/.vs
+components/CswClient/Pro/CswClient/.vs/CswClient/FileContentIndex/f37114e8-cba6-4c58-87b6-3ae31e401666.vsidx
+geoportal/src/main/resources/config/app-context.xml.esri
+geoportal/src/main/resources/config/app-context.xml.not
+geoportal/src/main/resources/config/app-context.xml.xom
+geoportal/src/main/resources/config/app-context.local
