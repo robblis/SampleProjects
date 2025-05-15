@@ -40,6 +40,7 @@ jobs:
       run: 7z x MvnProj/geoportal-server-catalog-JS4_Stac/geoportal/target/geoportal.war geoportal_war
 
     - name: List directory content
+      shell: cmd
       run: for /D %Y in (*) do echo %Y
       #- uses: actions/upload-artifact@v4
       #with:
