@@ -14,6 +14,11 @@ on:
   pull_request:
     branches: [ "master" ]
 
+env:
+  PROJECT_LOCATION: MvnProj/geoportal-server-catalog-JS4_Stac/geoportal
+  ELASTIC_BEANSTALK_NAME: my-beanstalk-name
+  ELASTIC_BEANSTALK_ENV_NAME: my-beanstalk-env-name
+
 jobs:
   build:
 
@@ -28,7 +33,7 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file MvnProj/geoportal-server-catalog-JS4_Stac/geoportal/pom.xml
+      run: mvn -B package --file $PROJECT_LOCATION/pom.xml
     - name: Checkout tools repo
       uses: actions/checkout@v4
       with:
@@ -51,7 +56,21 @@ jobs:
     - name: Archive geoportal_war to geoportal.war
       run: 7z a geoportal.war .\geoportal_war\*
 
-    - uses: actions/upload-artifact@v4
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v4
       with:
         name: geoportal-artifact
         path: geoportal.war
+      #deploy:
+
+      #runs-on: windows-latest
+      #needs: build
+
+      #steps:
+      #- uses: actions/download-artifact@v4.1.7
+      #- name: Configure AWS Credentials
+      # uses: aws-actions/configure-aws-credentials@v4
+      # with:
+      #   aws-region: us-east-1
+      #   aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #   aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
