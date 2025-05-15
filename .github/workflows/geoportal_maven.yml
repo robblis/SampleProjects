@@ -37,12 +37,21 @@ jobs:
         path: exxonmobil-gsdb
 
     - name: Extract MvnProj/geoportal-server-catalog-JS4_Stac/geoportal/target/geoportal.war
-      run: 7z x MvnProj/geoportal-server-catalog-JS4_Stac/geoportal/target/geoportal.war geoportal_war
+      run: 7z x MvnProj/geoportal-server-catalog-JS4_Stac/geoportal/target/geoportal.war -ogeoportal_war
 
     - name: List directory content
       shell: cmd
       run: for /D %%Y in (*) do echo %%Y
-      #- uses: actions/upload-artifact@v4
-      #with:
-      #name: geoportal-artifact
-      #path: MvnProj/geoportal-server-catalog-JS4_Stac/geoportal/target/geoportal.war
+
+    - name: Copy config files
+      run: |
+        copy /Y "exxonmobil-gsdb\geoportal server\WEB-INF\classes\config\*" "geoportal_war\WEB-INF\classes\config" 
+        copy /Y "exxonmobil-gsdb\geoportal server\WEB-INF\classes\service\config\*" "geoportal_war\WEB-INF\classes\service\config"
+
+    - name: Archive geoportal_war to geoportal.war
+      run: 7z a geoportal.war .\geoportal_war\*
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: geoportal-artifact
+        path: geoportal.war
