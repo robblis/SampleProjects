@@ -45,8 +45,8 @@ jobs:
 
     - name: Copy config files
       run: |
-        copy /Y "exxonmobil-gsdb\geoportal server\WEB-INF\classes\config\*" "geoportal_war\WEB-INF\classes\config" 
-        copy /Y "exxonmobil-gsdb\geoportal server\WEB-INF\classes\service\config\*" "geoportal_war\WEB-INF\classes\service\config"
+        Copy-Item -Path "exxonmobil-gsdb\geoportal server\WEB-INF\classes\config\*" -Destination "geoportal_war\WEB-INF\classes\config" -Recurse -Force
+        Copy-Item -Path "exxonmobil-gsdb\geoportal server\WEB-INF\classes\service\config\*" -Destination "geoportal_war\WEB-INF\classes\service\config" -Recurse -Force
 
     - name: Archive geoportal_war to geoportal.war
       run: 7z a geoportal.war .\geoportal_war\*
