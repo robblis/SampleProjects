@@ -26,8 +26,8 @@ on:
 
 env:
   PROJECT_LOCATION: MvnProj/geoportal-server-catalog-JS4_Stac/geoportal
-  ELASTIC_BEANSTALK_NAME: geoportal
-  ELASTIC_BEANSTALK_ENV_NAME: Geoportal-env
+  ELASTIC_BEANSTALK_NAME: geoportal-host
+  ELASTIC_BEANSTALK_ENV_NAME: Geoportal-host-env
 
 jobs:
   build:
