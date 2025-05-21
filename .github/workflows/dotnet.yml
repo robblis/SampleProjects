@@ -11,7 +11,7 @@ on:
 env:
   PROJECT_LOCATION: dotnet-mvc/dotnet-mvc.csproj
   ELASTIC_BEANSTALK_NAME: dotnet-mvc-app-host
-  ELASTIC_BEANSTALK_ENV_NAME: Dotnet-mvc-app-host-env
+  ELASTIC_BEANSTALK_ENV_NAME: Dotnet-mvc-app-host-env-1
 
 jobs:
   build:
