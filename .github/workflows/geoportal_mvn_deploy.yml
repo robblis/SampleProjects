@@ -52,10 +52,30 @@ jobs:
         repository: ${{env.GEOPORTAL_REPO}}
         ref: ${{env.GEOPORTAL_REPO_BRANCH}}
         token: ${{ secrets.RB_PAT }}
-        path: geoportal-server-catalog
-        
+        path: geoportal-server-catalog        
     
     - name: Build with Maven
       run: mvn -B package --file ${{env.PROJECT_LOCATION}}/pom.xml
+      
+    - name: Extract geoportal-server-catalog/geoportal/target/geoportal.war
+      run: 7z x geoportal-server-catalog/geoportal/target/geoportal.war -ogeoportal_war
+
+    - name: List directory content
+      shell: cmd
+      run: for /D %%Y in (*) do echo %%Y
+
+    - name: Copy config files
+      run: |
+        Copy-Item -Path "${{env.CONFIG_FILE_ROOT}}\WEB-INF\classes\config\*" -Destination "geoportal_war\WEB-INF\classes\config" -Recurse -Force
+        Copy-Item -Path "${{env.CONFIG_FILE_ROOT}}\WEB-INF\classes\service\config\*" -Destination "geoportal_war\WEB-INF\classes\service\config" -Recurse -Force
+
+    - name: Archive geoportal_war to geoportal.war
+      run: 7z a -tzip ${{github.run_id}}-geoportal.war .\geoportal_war\*
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: geoportal-artifacts
+        path: ${{github.run_id}}-geoportal.war
 
     
