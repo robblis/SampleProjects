@@ -29,6 +29,7 @@ env:
   ELASTIC_BEANSTALK_NAME: geoportal-host
   ELASTIC_BEANSTALK_ENV_NAME: Geoportal-host-env
   GEOPORTAL_REPO: Esri/geoportal-server-catalog
+  GEOPORTAL_REPO_BRANCH: JS4_Stac
   CONFIG_FILE_ROOT: MvnProj/exxonmobil-gsdb-main/geoportal server/Esri
 
 jobs:
@@ -37,25 +38,25 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v4    
+    - uses: actions/checkout@v4
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         java-version: '17.0.2+8'
         distribution: 'adopt'
         cache: maven
-    
+        
     - name: Checkout geoportal app repo
       uses: actions/checkout@v4
       with:
-        repository: ${{env.PROJECT_LOCATION}}
+        repository: ${{env.GEOPORTAL_REPO}}
+        ref: ${{env.GEOPORTAL_REPO_BRANCH}}
         token: ${{ secrets.RB_PAT }}
-        path: geoportal-server-catalog
+        path: geoportal-server-catalog        
     
     - name: Build with Maven
       run: mvn -B package --file ${{env.PROJECT_LOCATION}}/pom.xml
-    
-
+      
     - name: Extract geoportal-server-catalog/geoportal/target/geoportal.war
       run: 7z x geoportal-server-catalog/geoportal/target/geoportal.war -ogeoportal_war
 
@@ -76,7 +77,7 @@ jobs:
       with:
         name: geoportal-artifacts
         path: ${{github.run_id}}-geoportal.war
-
+        
   deploy:
 
     runs-on: ubuntu-latest
@@ -90,9 +91,11 @@ jobs:
         aws-region: us-east-1
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    - name: Deploy
+    #- name: Deploy
       #run: |
         #aws s3 cp "geoportal-artifacts/${{github.run_id}}-geoportal.war" s3://elasticbeanstalk-us-east-1-${{ secrets.AWS_ACCOUNT_ID }}/artifact/geoportal/
         #aws elasticbeanstalk create-application-version --application-name $ELASTIC_BEANSTALK_NAME --version-label ${{github.run_id}} --description ${{github.run_id}}-geoportal --source-bundle S3Bucket="elasticbeanstalk-us-east-1-${{ secrets.AWS_ACCOUNT_ID }}",S3Key="artifact/geoportal/${{github.run_id}}-geoportal.war"
         #aws elasticbeanstalk update-environment --application-name $ELASTIC_BEANSTALK_NAME --environment-name $ELASTIC_BEANSTALK_ENV_NAME --version-label ${{github.run_id}}
         #aws elasticbeanstalk wait environment-updated --application-name $ELASTIC_BEANSTALK_NAME --environment-name $ELASTIC_BEANSTALK_ENV_NAME
+
+    
