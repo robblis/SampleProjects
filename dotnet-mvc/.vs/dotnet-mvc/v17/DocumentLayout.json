@@ -37,8 +37,7 @@
               "ToolTip": "C:\\Repositories\\SampleProjects\\dotnet-mvc\\dotnet-mvc.csproj",
               "RelativeToolTip": "dotnet-mvc.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-21T16:10:41.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T16:10:41.568Z"
             },
             {
               "$type": "Document",
@@ -48,7 +47,7 @@
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Repositories\\SampleProjects\\dotnet-mvc\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABrAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-20T18:21:55.73Z",
               "EditorCaption": ""
