@@ -29,6 +29,7 @@ env:
   ELASTIC_BEANSTALK_NAME: geoportal-host
   ELASTIC_BEANSTALK_ENV_NAME: Geoportal-host-env
   GEOPORTAL_REPO: Esri/geoportal-server-catalog
+  GEOPORTAL_REPO_BRANCH: JS4_Stac
   CONFIG_FILE_ROOT: MvnProj/exxonmobil-gsdb-main/geoportal server/Esri
 
 jobs:
@@ -49,8 +50,10 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: ${{env.PROJECT_LOCATION}}
+        ref: ${{env.GEOPORTAL_REPO_BRANCH}}
         token: ${{ secrets.RB_PAT }}
         path: geoportal-server-catalog
+        
     
     - name: Build with Maven
       run: mvn -B package --file ${{env.PROJECT_LOCATION}}/pom.xml
