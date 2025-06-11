@@ -66,8 +66,8 @@ jobs:
 
     - name: Copy config files
       run: |
-        Copy-Item -Path "${{env.CONFIG_FILE_ROOT}}\WEB-INF\classes\config\*" -Destination "geoportal_war\WEB-INF\classes\config" -Recurse -Force
-        Copy-Item -Path "${{env.CONFIG_FILE_ROOT}}\WEB-INF\classes\service\config\*" -Destination "geoportal_war\WEB-INF\classes\service\config" -Recurse -Force
+        Copy-Item -Path "${{env.CONFIG_FILE_ROOT}}\*" -Destination "geoportal_war" -Recurse -Force
+        #Copy-Item -Path "${{env.CONFIG_FILE_ROOT}}\WEB-INF\classes\service\config\*" -Destination "geoportal_war\WEB-INF\classes\service\config" -Recurse -Force
 
     - name: Archive geoportal_war to geoportal.war
       run: 7z a -tzip ${{github.run_id}}-geoportal.war .\geoportal_war\*
