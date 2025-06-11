@@ -25,9 +25,11 @@ on:
         description: 'Test scenario tags'
 
 env:
-  PROJECT_LOCATION: MvnProj/geoportal-server-catalog-JS4_Stac/geoportal
+  PROJECT_LOCATION: geoportal-server-catalog/geoportal
   ELASTIC_BEANSTALK_NAME: geoportal-host
   ELASTIC_BEANSTALK_ENV_NAME: Geoportal-host-env
+  GEOPORTAL_REPO: Esri/geoportal-server-catalog
+  CONFIG_FILE_ROOT: MvnProj/exxonmobil-gsdb-main/geoportal server/Esri
 
 jobs:
   build:
@@ -36,23 +38,27 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         java-version: '17.0.2+8'
         distribution: 'adopt'
         cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file ${{env.PROJECT_LOCATION}}/pom.xml
-    - name: Checkout tools repo
+    
+    - name: Checkout geoportal app repo
       uses: actions/checkout@v4
       with:
-        repository: EsriPS/exxonmobil-gsdb
+        repository: ${{env.PROJECT_LOCATION}}
         token: ${{ secrets.RB_PAT }}
-        path: exxonmobil-gsdb
+        path: geoportal-server-catalog
+    
+    - name: Build with Maven
+      run: mvn -B package --file ${{env.PROJECT_LOCATION}}/pom.xml
+    
 
-    - name: Extract MvnProj/geoportal-server-catalog-JS4_Stac/geoportal/target/geoportal.war
-      run: 7z x MvnProj/geoportal-server-catalog-JS4_Stac/geoportal/target/geoportal.war -ogeoportal_war
+    - name: Extract geoportal-server-catalog/geoportal/target/geoportal.war
+      run: 7z x geoportal-server-catalog/geoportal/target/geoportal.war -ogeoportal_war
 
     - name: List directory content
       shell: cmd
@@ -60,8 +66,8 @@ jobs:
 
     - name: Copy config files
       run: |
-        Copy-Item -Path "exxonmobil-gsdb\geoportal server\WEB-INF\classes\config\*" -Destination "geoportal_war\WEB-INF\classes\config" -Recurse -Force
-        Copy-Item -Path "exxonmobil-gsdb\geoportal server\WEB-INF\classes\service\config\*" -Destination "geoportal_war\WEB-INF\classes\service\config" -Recurse -Force
+        Copy-Item -Path "${{env.CONFIG_FILE_ROOT}}\WEB-INF\classes\config\*" -Destination "geoportal_war\WEB-INF\classes\config" -Recurse -Force
+        Copy-Item -Path "${{env.CONFIG_FILE_ROOT}}\WEB-INF\classes\service\config\*" -Destination "geoportal_war\WEB-INF\classes\service\config" -Recurse -Force
 
     - name: Archive geoportal_war to geoportal.war
       run: 7z a -tzip ${{github.run_id}}-geoportal.war .\geoportal_war\*
@@ -86,8 +92,8 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     - name: Deploy
-      run: |
-        aws s3 cp "geoportal-artifacts/${{github.run_id}}-geoportal.war" s3://elasticbeanstalk-us-east-1-${{ secrets.AWS_ACCOUNT_ID }}/artifact/geoportal/
-        aws elasticbeanstalk create-application-version --application-name $ELASTIC_BEANSTALK_NAME --version-label ${{github.run_id}} --description ${{github.run_id}}-geoportal --source-bundle S3Bucket="elasticbeanstalk-us-east-1-${{ secrets.AWS_ACCOUNT_ID }}",S3Key="artifact/geoportal/${{github.run_id}}-geoportal.war"
-        aws elasticbeanstalk update-environment --application-name $ELASTIC_BEANSTALK_NAME --environment-name $ELASTIC_BEANSTALK_ENV_NAME --version-label ${{github.run_id}}
-        aws elasticbeanstalk wait environment-updated --application-name $ELASTIC_BEANSTALK_NAME --environment-name $ELASTIC_BEANSTALK_ENV_NAME
+      #run: |
+        #aws s3 cp "geoportal-artifacts/${{github.run_id}}-geoportal.war" s3://elasticbeanstalk-us-east-1-${{ secrets.AWS_ACCOUNT_ID }}/artifact/geoportal/
+        #aws elasticbeanstalk create-application-version --application-name $ELASTIC_BEANSTALK_NAME --version-label ${{github.run_id}} --description ${{github.run_id}}-geoportal --source-bundle S3Bucket="elasticbeanstalk-us-east-1-${{ secrets.AWS_ACCOUNT_ID }}",S3Key="artifact/geoportal/${{github.run_id}}-geoportal.war"
+        #aws elasticbeanstalk update-environment --application-name $ELASTIC_BEANSTALK_NAME --environment-name $ELASTIC_BEANSTALK_ENV_NAME --version-label ${{github.run_id}}
+        #aws elasticbeanstalk wait environment-updated --application-name $ELASTIC_BEANSTALK_NAME --environment-name $ELASTIC_BEANSTALK_ENV_NAME
