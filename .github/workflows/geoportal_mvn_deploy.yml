@@ -49,7 +49,7 @@ jobs:
     - name: Checkout geoportal app repo
       uses: actions/checkout@v4
       with:
-        repository: ${{env.PROJECT_LOCATION}}
+        repository: ${{env.GEOPORTAL_REPO}}
         ref: ${{env.GEOPORTAL_REPO_BRANCH}}
         token: ${{ secrets.RB_PAT }}
         path: geoportal-server-catalog
