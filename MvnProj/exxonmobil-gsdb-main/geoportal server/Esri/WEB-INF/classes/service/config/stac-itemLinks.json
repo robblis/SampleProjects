@@ -1,0 +1,62 @@
+{
+    "metadataItem": {
+        "links": [
+            {
+                "rel": "self",
+                "type": "application/geo+json",
+                "title": "Link to items in this collection: {collectionId}",
+                "href": "{url}/collections/{collectionId}/items",
+                "hreflang": "en-US"
+            },
+            {
+                "rel": "next",
+                "type": "application/geo+json",
+                "title": "Next page of results",
+                "href": "{url}/collections/{collectionId}/items?{urlparam}",
+                "hreflang": "en-US"
+            },
+            {
+                "rel": "parent",
+                "type": "application/json",
+                "title": "Link to the {collectionId} collection",
+                "href": "{url}/collections/{collectionId}",
+                "hreflang": "en-US"
+            },
+            {
+                "rel": "root",
+                "type": "application/json",
+                "title": "Link to all collections",
+                "href": "{url}",
+                "hreflang": "en-US"
+            }
+        ]
+    },
+    "searchItem": {
+        "links": [
+            {
+                "rel": "self",
+                "type": "application/geo+json",
+                "title": "Current page of results",
+                "href": "{url}/search",               
+                "hreflang": "en-US"
+            },
+            {
+                "rel": "next",
+                "type": "application/geo+json",
+                "title": "Next page of results",
+                "href": "{url}/search?{urlparam}",
+                "method":"POST",
+                "body":"{body}",
+                "merge":false,
+                "hreflang": "en-US"
+            },
+            {
+                "rel": "root",
+                "type": "application/json",
+                "title": "Link to all collections",
+                "href": "{url}",
+                "hreflang": "en-US"
+            }
+        ]
+    }
+}

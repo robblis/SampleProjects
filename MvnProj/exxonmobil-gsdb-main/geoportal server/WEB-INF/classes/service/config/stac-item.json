@@ -1,0 +1,77 @@
+{	
+	"type":"Feature",	
+	"id": "$._source.id",
+	"collection": "$._source.src_collections_s[0]",		
+	"stac_version":"1.0.0",
+	"stac_extensions": [
+		"https://exxonmobil.com/gsdb/gsdb/v1.0.0/schema.json",
+		"https://exxonmobil.com/gsdb/xom/v1.0.0/schema.json"
+	],
+	"bbox": ["$._source.envelope_geo","$._source.bbox"],	
+	"geometry": ["$._source.shape_geo",	"$._source.geometry"],	
+	"properties": {
+    "updated":"$._source.properties.sys_modified_dt",
+    "datetime":"$._source.properties.sys_modified_dt",
+    "created": "$._source.properties.created",
+    "creation_date": "$._source.properties.creation_date",
+    "xom:tagnumber": "$._source.properties.xom:tagnumber",
+    "xom:ecl_id": "$._source.properties.xom:ecl_id",
+    "xom:ecl_version": "$._source.properties.xom:ecl_version",
+    "xom:sitename": "$._source.properties.xom:sitename",
+    "xom:site_local_crs": "$._source.properties.xom:site_local_crs",
+    "xom:discipline": "$._source.properties.xom:discipline",
+    "xom:edp_equip_id": "$._source.properties.xom:edp_equip_id",
+    "xom:source_key_id": "$._source.properties.xom:source_key_id",
+    "xom:source_system": "$._source.properties.xom:source_system",
+    "gsdb:crs": "$._source.properties.gsdb:crs",
+    "gsdb:unit_of_measument": "$._source.properties.gsdb:unit_of_measument",
+    "gsdb:geometry_wkt": "$._source.properties.gsdb:geometry_wkt",
+    "gsdb:status": "$._source.properties.gsdb:status",
+    "geometry": "$._source.properties.geometry",
+    "place": "$._source.place",
+    "updated_date": "$._source.properties.updated_date"
+  },		
+	"assets":
+		{
+		"thumbnail": {
+		      "href": "$._source.thumbnail_s",
+		      "title": "Thumbnail",
+		      "description":"An asset that represents a thumbnail of the Item",
+		      "type": "image/jpeg",
+		      "roles": [
+		        "thumbnail"
+		      ]
+		    },
+		 "json-metadata": {
+		      "href": "$._source.links_s[0]",
+		      "title": "Extended Metadata",
+		      "description":"A metadata sidecar file describing the data in this Item, for example the Landsat-8 MTL file.",
+		      "type": "application/json",
+		      "roles": [
+		        "metadata"
+		      ]
+		   }		   		
+	  },
+	"links": [
+			{
+			"rel": "self",
+			"href": "{url}/collections/{itemCollectionId}/items/{itemId}",
+			"type": "application/geo+json"
+			},
+			{
+			"rel": "root",
+			"href": "{url}",
+			"type": "application/json"
+			},
+			{
+			"rel": "parent",
+			"href": "{url}/collections/{itemCollectionId}/items",
+			"type": "application/json"
+			},
+			{
+			"rel": "collection",
+			"href": "{url}/collections/{itemCollectionId}",
+			"type": "application/json"
+			}
+		]
+}

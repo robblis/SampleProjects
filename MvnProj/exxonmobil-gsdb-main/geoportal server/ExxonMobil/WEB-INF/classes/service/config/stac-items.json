@@ -1,0 +1,63 @@
+{
+    "response": {
+        "type": "FeatureCollection",
+        "timestamp":"{currenttime}",
+        "numberMatched": "{numberMatched}",
+        "numberReturned": "{numberReturned}",	      
+        "features": "{features}",	   
+        "links": "service/config/stac-itemLinks.json"
+    },
+    "featurePropPath": {
+    "type":"Feature",	
+    "id": "$._source.id",
+    "collection": "$._source.src_collections_s[0]",		
+    "stac_version":"1.0.0",
+    "stac_extensions": [
+      "https://exxonmobil.com/gsdb/gsdb/v1.0.0/schema.json",
+      "https://exxonmobil.com/gsdb/xom/v1.0.0/schema.json"
+    ],
+    "bbox": ["$._source.envelope_geo","$._source.bbox"],	
+    "geometry": ["$._source.shape_geo",	"$._source.geometry"],				
+    "properties": {
+		"updated":"$._source.properties.sys_modified_dt",
+		"datetime":"$._source.properties.sys_modified_dt",
+		"created": "$._source.properties.created",
+		"creation_date": "$._source.properties.creation_date",
+		"xom:tagnumber": "$._source.properties.xom:tagnumber",
+		"xom:sitename": "$._source.properties.xom:sitename",
+		"xom:source_key_id": "$._source.properties.xom:source_key_id",
+		"xom:source_system": "$._source.properties.xom:source_system",
+		"xom:consuming_app_proj_name": "$._source.properties.xom:consuming_app_proj_name",
+		"gsdb:crs": "$._source.properties.gsdb:crs",
+		"gsdb:unit_of_measument": "$._source.properties.gsdb:unit_of_measument",
+		"gsdb:geometry_wkt": "$._source.properties.gsdb:geometry_wkt",
+		"gsdb:status": "$._source.properties.gsdb:status",
+		"geometry": "$._source.properties.geometry",
+		"place": "$._source.place",
+		"updated": "$._source.properties.updated_date"
+    },
+    "links": [
+      {
+          "rel": "self",
+          "href": "{url}/collections/{itemCollectionId}/items/{itemId}",
+          "type": "application/geo+json"
+      },
+      {
+          "rel": "root",
+          "href": "{url}",
+          "type": "application/json"
+      },
+      {
+          "rel": "parent",
+          "href": "{url}/collections/{itemCollectionId}",
+          "type": "application/json"
+      },
+      {
+          "rel": "collection",
+          "href": "{url}/collections/{itemCollectionId}",
+          "type": "application/json"
+      }
+    ],
+    "assets": {}
+  }
+}
