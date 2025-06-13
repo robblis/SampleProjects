@@ -51,7 +51,7 @@ jobs:
       with:
         repository: ${{env.GEOPORTAL_REPO}}
         ref: ${{env.GEOPORTAL_REPO_BRANCH}}
-        token: ${{ secrets.RB_PAT }}
+        #token: ${{ secrets.RB_PAT }}
         path: geoportal-server-catalog        
     
     - name: Build with Maven
