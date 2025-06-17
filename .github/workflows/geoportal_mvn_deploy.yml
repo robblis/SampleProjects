@@ -55,7 +55,8 @@ jobs:
         path: geoportal-server-catalog        
     
     - name: Build with Maven
-      run: mvn -B package --file ${{env.PROJECT_LOCATION}}/pom.xml
+      run: mvn install --file ${{env.PROJECT_LOCATION}}/pom.xml
+      #run: mvn -B package --file ${{env.PROJECT_LOCATION}}/pom.xml
       
     - name: Extract geoportal-server-catalog/geoportal/target/geoportal.war
       run: 7z x geoportal-server-catalog/geoportal/target/geoportal.war -ogeoportal_war
