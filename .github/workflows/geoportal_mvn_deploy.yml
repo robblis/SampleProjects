@@ -77,7 +77,8 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: geoportal-artifacts
-        path: ${{github.run_id}}-geoportal.war
+        path: .\geoportal_war\*
+        #path: ${{github.run_id}}-geoportal.war
         
   deploy:
 
