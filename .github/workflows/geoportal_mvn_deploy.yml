@@ -76,10 +76,20 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: geoportal-artifacts
+        name: geoportal-war
         path: .\geoportal_war\*
         #path: ${{github.run_id}}-geoportal.war
         
+    - name: Create or update release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: latest
+        name: Latest Release
+        draft: false
+        prerelease: false
+        files: |
+          ./geoportal-war
+      
   deploy:
 
     runs-on: ubuntu-latest
