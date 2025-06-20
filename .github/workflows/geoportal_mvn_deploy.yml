@@ -72,46 +72,23 @@ jobs:
 
     - name: Archive geoportal_war to geoportal.war
       #run: 7z a -tzip ${{github.run_id}}-geoportal.war .\geoportal_war\*
-      run: 7z a -tzip geoportal.war .\geoportal_war\*
+      run: 7z a -tzip geoportal.zip .\geoportal_war\*
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: geoportal-war
         path: .\geoportal_war\*
-        #path: ${{github.run_id}}-geoportal.war
+        #path: ${{github.run_id}}-geoportal.zip
 
-
-
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create or update release
+      uses: softprops/action-gh-release@v1
       with:
         tag_name: latest
-        release_name: Latest Release
+        name: Latest Release
         draft: false
         prerelease: false
-    - name: Upload Release Asset
-      id: upload-release-asset 
-      uses: actions/upload-release-asset@v1
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-        asset_path: ./geoportal.war
-        asset_name: geoportal.war
-        asset_content_type: application/zip
-        
-    #- name: Create or update release
-      #uses: softprops/action-gh-release@v1
-      #with:
-        #tag_name: latest
-        #name: Latest Release
-        #draft: false
-        #prerelease: false
-        #files: geoportal.war
+        files: geoportal.zip
       
   deploy:
 
