@@ -71,7 +71,8 @@ jobs:
         #Copy-Item -Path "${{env.CONFIG_FILE_ROOT}}\WEB-INF\classes\service\config\*" -Destination "geoportal_war\WEB-INF\classes\service\config" -Recurse -Force
 
     - name: Archive geoportal_war to geoportal.war
-      run: 7z a -tzip ${{github.run_id}}-geoportal.war .\geoportal_war\*
+      #run: 7z a -tzip ${{github.run_id}}-geoportal.war .\geoportal_war\*
+      run: 7z a -tzip geoportal.war .\geoportal_war\*
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v4
@@ -87,8 +88,7 @@ jobs:
         name: Latest Release
         draft: false
         prerelease: false
-        files: |
-          ./geoportal_war
+        files: geoportal.war
       
   deploy:
 
